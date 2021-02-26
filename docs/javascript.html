@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScriptが入った版</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <h1>HTMLとCSSのページ</h1>
+  <p id="text">
+    このページは<b>HTMLとCSSとJavaScript</b>で作られています！
+  </p>
+  <button onclick="changeText()">
+    ここを押すと何か起こるかも？
+  </button>
+
+  <script>
+    // 変数の定義
+    let count = 0;
+
+    // 文字を変更する
+    function changeText() {
+      // 変数 count に +1 する（＝インクリメント）
+      count++;
+
+      // IDが text のタグの中の文字列を変更する
+      document.getElementById("text").innerHTML = "ボタンが<b>" + count + "回</b>押されました！";
+    }
+  </script>
+</body>
+</html>
